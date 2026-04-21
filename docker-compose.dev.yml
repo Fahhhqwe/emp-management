@@ -22,6 +22,8 @@ services:
       - server
     command: npm run dev -- -p 4000 -H 0.0.0.0 --webpack
     restart: unless-stopped
+    networks:
+      - emp-network
 
   server:
     build:
@@ -38,3 +40,10 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
       - CHOKIDAR_INTERVAL=500
+    networks:
+      - emp-network
+
+networks:
+  emp-network:
+    external: true
+    name: emp-network
