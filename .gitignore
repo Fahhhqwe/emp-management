@@ -1,0 +1,21 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.sql
+
+# .NET
+bin/
+obj/
+
+# Next.js / Node
+node_modules/
+.next/
+out/
+build/
+
+# IDE / OS
+.vs/
+.vscode/
+.idea/
+.DS_Store
